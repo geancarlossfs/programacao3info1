@@ -24,6 +24,7 @@ class CategoriaCrud{
         $sql ='select * from categoria where id_categoria='.$id;
         $resultado = $this->conexao->query($sql);
 
+
         //FETCH - TRANSFORMA O RESULTADO EM UM ARRAY ASSOCIATIVO
         $categoria = $resultado->fetch(PDO::FETCH_ASSOC);
 
@@ -31,11 +32,32 @@ class CategoriaCrud{
         $objcat = new Categoria($categoria['id_categoria'], $categoria['nome_categoria'], $categoria['descricao_categoria']);
 
         //RETORNAR UM OBJETO CATEGORIA COM OS VALORES
-        return $objcat;
+        //return $objcat;
 
     }
 
     public function getCategorias(){
+        $sql = "SELECT * FROM categoria";
+
+        $resultado = $this->query($sql);
+
+        $categorias = $resultado->fetchAll(PDO::FETCH_ASSOC);
+
+        $listaCategorias = [];
+        foreach ($categorias as $categoria){
+            $id = $categoria['id_categoria'];
+            $nome = $categoria['nome_categoria'];
+            $descricao = $categoria['descricao_categoria'];
+
+            $obj = new Categoria($id, $nome, $descricao);
+            $listaCategorias[] = $obj;
+
+
+        }
+
+        return $listaCategorias;
+        //var_dump($categorias);
+
 
     }
 
