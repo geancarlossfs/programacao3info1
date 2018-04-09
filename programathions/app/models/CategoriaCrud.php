@@ -1,6 +1,4 @@
 <?php
-
-
 require_once 'DBConnection.php';
 require_once 'Categoria.php';
 
@@ -70,7 +68,7 @@ class CategoriaCrud{
 
     public function deleteCategoria(int $id){
 
-        $sql = "DELETE FROM categoria WHERE id_categoria=5";
+        $sql = "DELETE FROM categoria WHERE id_categoria=".$id;
 
         try{ //TENTA EXECUTAR A INSTRUÇÃO
             $this->conexao->exec($sql);
