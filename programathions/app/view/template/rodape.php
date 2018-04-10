@@ -1,5 +1,6 @@
+<link rel="stylesheet" href="style.css">
 <style>
-.footer {
+    .footer {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -7,9 +8,9 @@
     background-color: red;
     color: white;
     text-align: center;
-}
+    }
 </style>
 
 <div class="footer">
-  <p>Gean Carlos 3info1</p>
+  <p>Gean Carlos|Leonardo Edenir|Tainá Vollmann 3info1</p>
 </div>

@@ -1,6 +1,6 @@
+<link rel="stylesheet" href="style.css">
 <style>
     .header{
-        position: ;
         display: block;
         background-color: #007bff;
         width: 100%;
