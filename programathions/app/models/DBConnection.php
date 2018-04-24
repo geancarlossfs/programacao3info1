@@ -2,9 +2,9 @@
 class DBConnection {
 
     const HOST      = "localhost";
-    const NOMEBANCO = "3info1";
-    const USUARIO   = "root";
-    const SENHA     = "";
+    const NOMEBANCO = "3info1_programacao";
+    const USUARIO   = "3info1";
+    const SENHA     = "3info1";
 
     //!!!Substitua daqui para baixo
     public static $conexao = null;

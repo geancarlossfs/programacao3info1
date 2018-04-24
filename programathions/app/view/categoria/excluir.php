@@ -1,4 +1,4 @@
-<form method="post" action="categoria.php?action=excluir">
+<form method="get" action="categoria.php?action=excluir">
     <input type="hidden" name="id" value="<?= $categoria->getId() ?>">
     <label for="nome">Nome</label>
     <input type="text" name="nome" id="nome" value="<?= $categoria->getNome() ?>">
