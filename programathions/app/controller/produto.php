@@ -32,6 +32,7 @@ switch($action){
 
         break;
 
+
     case 'inserir':
 
         if (!isset($_POST['gravar'])) {
@@ -39,9 +40,9 @@ switch($action){
             include('../view/produtos/inserir.php');
             include('../view/template/rodape.php');
         }else{
-            $produto = new Produto(null, $_POST['nome'], $_POST['descricao'], $_POST['preco'], $_POST['foto']);
+            $prod = new Produto(null, $_POST['nome'], $_POST['descricao'], $_POST['preco']);
             $crud = new ProdutoCrud();
-            $crud->insertProduto($produto);
+            $crud->insertProduto($prod);
             header('Location: produto.php');
         }
         break;
@@ -56,10 +57,11 @@ switch($action){
             include('../view/produtos/alterar.php');
             include('../view/template/rodape.php');
         }else{
-            $produto = new Produto($_POST['id'], $_POST['nome'], $_POST['descricao'],$_POST['preco'], $_POST['foto']);
+
+            $prod = new Produto($_POST['id'], $_POST['nome'], $_POST['descricao'], $_POST['preco'], null, null);
             $crud = new ProdutoCrud();
-            $res = $crud->updateProduto($produto);
-            //echo $res;
+            $res = $crud->updateProduto($prod);
+
             header('Location: produto.php');
         }
         break;
@@ -69,7 +71,8 @@ switch($action){
         $crud = new ProdutoCrud();
         $crud->deleteProduto($_GET['id']);
         header('Location: produto.php');
+
+        break;
 }
 
 ?>
-

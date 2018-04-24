@@ -49,30 +49,26 @@ class ProdutoCrud{
         return $listaProdutos;
     }
 
-    public function insertProduto(Produto $produto){
+    public function insertProduto(Produto $prod){
 
-        $sql = "INSERT INTO produto (nome_produto, descricao_produto, foto_produto, preco_produto) VALUES ('".$produto->getNome()."','".$produto->getDescricao()."','"
-            .$produto->getPreco()."','".$produto->getFoto().")";
+        $sql = "INSERT INTO produto (nome_produto, descricao_produto, foto_produto, preco_produto) VALUES ('".$prod->getNome()."','".$prod->getDescricao()."', '".$prod->getFoto()."',''".$prod->getPreco()."')";
 
         try{
             $this->conexao->exec($sql);
         }catch (PDOException $e){
             return $e->getMessage();
         }
-
     }
 
-    public function updateProduto(Produto $produto){
-
-        $sql = "UPDATE produto SET nome_produto = '".$produto->getNome()."', descricao_produto = '".$produto->getDescricao()."', foto_produto ='".$produto->getFoto()."', preco_produto ='
-        ".$produto->getPreco();
+    public function updateProduto(Produto $prod){
+        // MONTA O TEXTO
+        $sql = "UPDATE produto SET nome_produto = '".$prod->getNome()."', descricao_produto = '".$prod->getDescricao()."', preco_produto = '".$prod->getPreco()."' WHERE id_produto =".$prod->getId();
 
         try{
-            $this->conexao->exec($sql);
-        }catch (PDOException $e){
+            return $this->conexao->exec($sql);
+        }catch (PDOException $e){ //EM CASO DE ERRO, CAPTURA E RETORNA A MENSAGEM
             return $e->getMessage();
         }
-
     }
 
     public function deleteProduto(int $id){
@@ -84,6 +80,6 @@ class ProdutoCrud{
         }catch (PDOException $e){
             return $e;
         }
-
     }
+
 }

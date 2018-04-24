@@ -58,7 +58,7 @@ switch($action){
             $cat = new Categoria($_POST['id'], $_POST['nome'], $_POST['descricao']);
             $crud = new CategoriaCrud();
             $res = $crud->updateCategoria($cat);
-            //echo $res;
+
             header('Location: categoria.php');
         }
         break;
@@ -68,6 +68,8 @@ switch($action){
         $crud = new CategoriaCrud();
         $crud->deleteCategoria($_GET['id']);
         header('Location: categoria.php');
+
+        break;
 }
 
 ?>
