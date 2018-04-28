@@ -1,4 +1,4 @@
-<form method="post" action="produto.php?action=alterar&id=<?= $produto->getId() ?>">
+<form method="post" action="produto.php?action=alterar&id= <?= $produto->getId() ?>">
 
     <input type="hidden" name="id" value="<?= $produto->getId() ?>">
 
@@ -11,7 +11,7 @@
     <br>
 
     <label for="preco">Preço</label>
-    <input type="text" name="preco" id="name" value="<?= $produto->getPreco() ?>">
+    <input type="text" name="preco" id="name" value="" <?= $produto->getPreco() ?>">
     <br>
 
     <input type="submit" name="gravar" value="Gravar">

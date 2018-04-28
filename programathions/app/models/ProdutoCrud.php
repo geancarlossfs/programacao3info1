@@ -15,7 +15,7 @@ class ProdutoCrud{
         //RETORNA UMA CATEGORIA, DADO UM ID
 
         //FAZER A CONSULTA
-        $sql ='select * from produto where id_produto='.$id;
+        $sql ="select * from produto where id_produto=".$id;
         $resultado = $this->conexao->query($sql);
 
         //FETCH - TRANSFORMA O RESULTADO EM UM ARRAY ASSOCIATIVO
@@ -51,18 +51,21 @@ class ProdutoCrud{
 
     public function insertProduto(Produto $prod){
 
-        $sql = "INSERT INTO produto (nome_produto, descricao_produto, foto_produto, preco_produto) VALUES ('".$prod->getNome()."','".$prod->getDescricao()."', '".$prod->getFoto()."',''".$prod->getPreco()."')";
+        $sql = "INSERT INTO produto (nome_produto, descricao_produto, preco_produto, id_categoria) VALUES ('".$prod->getNome()."','"
+            .$prod->getDescricao()."','".$prod->getPreco()."','".$prod->getIdcategoria()."')";
 
         try{
-            $this->conexao->exec($sql);
-        }catch (PDOException $e){
+            $result = $this->conexao->exec($sql);
+            return $result;
+        }catch (Exception $e){
             return $e->getMessage();
         }
     }
 
     public function updateProduto(Produto $prod){
         // MONTA O TEXTO
-        $sql = "UPDATE produto SET nome_produto = '".$prod->getNome()."', descricao_produto = '".$prod->getDescricao()."', preco_produto = '".$prod->getPreco()."' WHERE id_produto =".$prod->getId();
+        $sql = "UPDATE produto SET nome_produto = '".$prod->getNome()."', descricao_produto = '".$prod->getDescricao()."', preco_produto = '"
+            .$prod->getPreco()."' WHERE id_produto =".$prod->getId();
 
         try{
             return $this->conexao->exec($sql);

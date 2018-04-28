@@ -40,9 +40,11 @@ switch($action){
             include('../view/produtos/inserir.php');
             include('../view/template/rodape.php');
         }else{
-            $prod = new Produto(null, $_POST['nome'], $_POST['descricao'], $_POST['preco']);
+            $prod = new Produto(null, $_POST['nome'], $_POST['descricao'], $_POST['foto_produto'] = null, $_POST['preco'], $_POST['categoria']);
+
             $crud = new ProdutoCrud();
-            $crud->insertProduto($prod);
+            $res = $crud->insertProduto($prod);
+            echo $res;
             header('Location: produto.php');
         }
         break;
@@ -58,7 +60,7 @@ switch($action){
             include('../view/template/rodape.php');
         }else{
 
-            $prod = new Produto($_POST['id'], $_POST['nome'], $_POST['descricao'], $_POST['preco'], null, null);
+            $prod = new Produto($_POST['id'], $_POST['nome'], $_POST['descricao'], $_POST['preco'], null, $_POST['id_categoria']);
             $crud = new ProdutoCrud();
             $res = $crud->updateProduto($prod);
 

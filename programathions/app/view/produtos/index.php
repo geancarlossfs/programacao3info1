@@ -1,4 +1,4 @@
-<a href="produto.php?action=inserir">Incluir nova acategoria</a>
+<a href="produto.php?action=inserir">Incluir novo produto</a>
 <br>
 <br>
 

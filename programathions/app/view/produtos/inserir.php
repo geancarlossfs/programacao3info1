@@ -7,10 +7,13 @@
     <textarea name="descricao" id="descricao" cols="30" rows="10"></textarea>
     <br>
 
+    <label for="foto">categoria</label>
+    <input type="number" name="categoria" id="categoria">
+    <br>
+
     <label for="preco">Preço</label>
     <input type="number" name="preco" id="preco">
     <br>
-
 
     <input type="submit" name="gravar" value="Gravar">
 
