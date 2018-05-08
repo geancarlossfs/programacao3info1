@@ -1,14 +1,87 @@
 <html>
-<html>
 <head>
+
+	<meta charset="utf-8">
+
 	<title></title>
+
+	<style type="text/css">
+		#principal h2{
+			background-color: peru;
+			margin: 0px;
+			padding-left: 10px;
+
+		}
+		#principal p{
+			margin-top: 0px;
+			border: 3px solid peru;
+			padding: 5px;
+		}
+
+		#destaque{
+			color: peru;
+		}
+
+	</style>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+
+	<script>
+
+		$(document).ready(function () {
+
+		    $("#principal h2").click(function () {
+		        $("#principal").slideToggle("fast");
+                $("#oculta").show();
+		        $("#mostra").hide();
+            });
+
+		    $("#oculta").click(function () {
+				$("#principal").slideToggle("fast");
+				$("#oculta").hide();
+                $("#mostra").show();
+            });
+
+		    $(".texto-destaque").hover(function () {
+				$(".texto-destaque").addClass("destaque");
+            });
+
+		    $()
+
+		});
+
+	</script>
+
 </head>
 <body>
 
 	<h1>Titulo</h1>
+	<div>
+		<span id="mostra">mostrar</span>
+		<span id="oculta">ocultar</span>
+	</div>
+	<p>Lorem ipsum dolor sit amet, consectetur <span id="destaque">adipisicing elit. Architecto aut dicta dolorem eum ex impedit molestiae sequi ullam.
+		Autem blanditiis cumque ducimus eaque eum excepturi non perspiciatis recusandae rerum voluptatibus.lorem </span>
+	</p>
 
-	<button>mostrar</button>
-	<button>ocultar</button>
+	<div id="principal">
+
+		<h2>Acordion1</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut deleniti dicta doloribus iure maiores nisi, non quia tenetur.
+			Amet consequatur dolorem dolorum minima, nemo omnis pariatur quas repellat temporibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut deleniti dicta doloribus iure maiores nisi, non quia tenetur.
+			Amet consequatur dolorem dolorum minima, nemo omnis pariatur quas repellat temporibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut deleniti dicta doloribus iure maiores nisi, non quia tenetur.
+			Amet consequatur dolorem dolorum minima, nemo omnis pariatur quas repellat temporibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut deleniti dicta doloribus iure maiores nisi, non quia tenetur.
+			Amet
+		</p>
+	</div>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet autem deleniti dolorum eaque eum exercitationem
+		ipsam ipsum minus molestias nobis officiis provident quas qui quibusdam, sequi, similique tempora totam!
+	</p>
+
+
+
 
 </body>
 </html>
