@@ -9,7 +9,7 @@
 //            //para testar se funciona o jquery
 //            alert("funcionou")
         $("#abas ul li").click(function () {
-            $("#abas ul li").removeClass();
+            $("#abas ul li").removeClass("selecionado");
             $(this).addClass("selecionado");
             $(".conteudo").hide();
             //guardo o valor da id de quem eu cliquei
