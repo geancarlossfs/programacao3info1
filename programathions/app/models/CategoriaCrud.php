@@ -1,6 +1,5 @@
 <?php
 
-
 require_once 'DBConnection.php';
 require_once 'Categoria.php';
 

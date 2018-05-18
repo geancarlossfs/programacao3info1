@@ -1,0 +1,16 @@
+#abas{
+
+}
+#abas ul li{
+    display: inline;
+    border: 1px solid red;
+    padding: 6px;
+    border-radius: 10px 0 10px 0;
+}
+#conteudos{
+    border: 1px solid black;
+}
+.selecionado{
+    background-color: #e0a800;
+    box-shadow: 5px 0 5px lightslategrey;
+}
