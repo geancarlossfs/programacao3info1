@@ -1,0 +1,151 @@
+<html>
+<head>
+
+	<meta charset="utf-8">
+
+	<title></title>
+
+	<style type="text/css">
+		#principal h2{
+			background-color: peru;
+			margin: 0px;
+			padding-left: 10px;
+
+		}
+		#principal, #principal2, #principal3 p{
+			margin-top: 0px;
+			border: 3px solid peru;
+			padding: 5px;
+		}
+
+		#destaque{
+			color: peru;
+		}
+
+	</style>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+
+	<script>
+
+		$(document).ready(function() {
+
+            $("#principal h2").click(function () {
+                $("#principal p").slideToggle("fast");
+
+                //$(this).parent().find("p").slideToggle("slow")
+
+            });
+
+		    $("#principal2 h2").click(function () {
+		        $("#principal2 p").slideToggle("fast");
+
+            });
+
+		    $("#principal3 h2").click(function () {
+		        $("#principal3 p").slideToggle("fast");
+
+			});
+		    $("#oculta").click(function () {
+				$("#principal").slideToggle("fast");
+				$("#oculta").hide();
+                //$("#mostra").show();
+            });
+
+		    $("#mostra").click(function () {
+				$("#principal").show();
+				$("#oculta").show();	
+            });
+		    
+		    $("#alterna").click(function () {
+				$("#principal").toggle();
+            });
+
+		    $("#mostradevagar").click(function () {
+				$("#principal").fadeIn(2000);
+		    });
+
+		    $("#ocultadevagar").click(function () {
+				$("#principal").fadeOut(2000);
+		    });
+
+		    $("#mostraoculta").click(function () {
+		    	$("#principal").fadeToggle(2000);
+		    });
+
+		    $("#prabaixo").click(function () {
+		    	$("#principal").slideDown(2000);
+		    });
+
+		    $("#pracima").click(function () {
+		    	$("#principal").slideUp(2000);
+		    });
+
+		    $("#cimabaixo").click(function () {
+		    	$("#principal").slideToggle(2000);
+		    });
+
+		    $(".texto-destaque").hover(function () {
+				$(".texto-destaque").addClass("destaque");
+            });
+
+		});
+
+	</script>
+
+</head>
+<body>
+
+	<h1>Um site desses bixo ^^</h1>
+	<div>
+		<button id="mostra">show</button>
+		<button id="oculta">hide</button>
+		<button id="alterna">toggle</button>
+		<button id="mostradevagar">fadeIn</button>
+		<button id="ocultadevagar">fadeOut</button>
+		<button id="mostraoculta">fadeToggle</button>
+		<button id="prabaixo">slideDown</button>
+		<button id="pracima">slideUp</button>
+		<button id="cimabaixo">slideToggle</button>
+	</div>
+	<p>Lorem ipsum dolor sit amet, consectetur <span id="destaque">adipisicing elit. Architecto aut dicta dolorem eum ex impedit molestiae sequi ullam.
+		Autem blanditiis cumque ducimus eaque eum excepturi non perspiciatis recusandae rerum voluptatibus.lorem </span>
+	</p>
+
+	<div id="principal">
+		<h2>Clique aqui e seja feliz!!</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut deleniti dicta doloribus iure maiores nisi, non quia tenetur.
+			Amet consequatur dolorem dolorum minima, nemo omnis pariatur quas repellat temporibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut deleniti dicta doloribus iure maiores nisi, non quia tenetur.
+			Amet consequatur dolorem dolorum minima, nemo omnis pariatur quas repellat temporibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut deleniti dicta doloribus iure maiores nisi, non quia tenetur.
+			Amet consequatur dolorem dolorum minima, nemo omnis pariatur quas repellat temporibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut deleniti dicta doloribus iure maiores nisi, non quia tenetur.
+			Amet
+		</p>
+	</div>
+
+	<div id="principal2">
+
+		<h2>Clique aqui e seja feliz!!</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut deleniti dicta doloribus iure maiores nisi, non quia tenetur.
+			Amet consequatur dolorem dolorum minima, nemo omnis pariatur quas repellat temporibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut deleniti dicta doloribus iure maiores nisi, non quia tenetur.
+			Amet consequatur dolorem dolorum minima, nemo omnis pariatur quas repellat temporibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut deleniti dicta doloribus iure maiores nisi, non quia tenetur.
+			Amet consequatur dolorem dolorum minima, nemo omnis pariatur quas repellat temporibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut deleniti dicta doloribus iure maiores nisi, non quia tenetur.
+			Amet
+		</p>
+	</div>
+
+	<div id="principal3">
+
+		<h2>Clique aqui e seja feliz!!</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut deleniti dicta doloribus iure maiores nisi, non quia tenetur.
+			Amet consequatur dolorem dolorum minima, nemo omnis pariatur quas repellat temporibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut deleniti dicta doloribus iure maiores nisi, non quia tenetur.
+			Amet consequatur dolorem dolorum minima, nemo omnis pariatur quas repellat temporibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut deleniti dicta doloribus iure maiores nisi, non quia tenetur.
+			Amet consequatur dolorem dolorum minima, nemo omnis pariatur quas repellat temporibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut deleniti dicta doloribus iure maiores nisi, non quia tenetur.
+			Amet
+		</p>
+	</div>
+
+
+
+</body>
+</html>
