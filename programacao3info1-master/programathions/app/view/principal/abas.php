@@ -1,7 +1,7 @@
 <html>
 <head>
     <title></title>
-    <link rel="stylesheet" href="../../assets/abas.css">
+    <link rel="stylesheet" href="programathions/app/assets/abas.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
     <script>
@@ -43,7 +43,7 @@
 
 <div id="abas">
         <ul>
-            <?php foreach ($categoria as $categorias): ?>
+            <?php foreach ($categorias as $categoria): ?>
                 <li id="aba<?= $categoria->getId()?> "><?= $categoria->getNome()?></li>
             <?php endforeach; ?>
         </ul>
