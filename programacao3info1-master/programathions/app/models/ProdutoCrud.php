@@ -42,8 +42,9 @@ class ProdutoCrud{
             $descricao = $produto['descricao_produto'];
             $foto = $produto['foto_produto'];
             $preco = $produto['preco_produto'];
+            $id_categoria = $produto['id_categoria'];
 
-            $obj = new Produto($id, $nome, $descricao, $preco, $foto);
+            $obj = new Produto($id, $nome, $descricao, $preco, $foto, $id_categoria);
             $listaProdutos[] = $obj;
         }
         return $listaProdutos;

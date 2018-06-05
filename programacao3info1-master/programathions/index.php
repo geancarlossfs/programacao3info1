@@ -50,7 +50,7 @@
 	}else{
 ?>
 
-	<p>Olá <?= $_SESSION['nome'] ?> | <a href="logout.php">Sair</a></p>
+	<p>Olá<?= $_SESSION['nome'] ?> | <a href="logout.php">Sair</a></p>
 
 <?php
 	}

@@ -6,33 +6,46 @@
 
     <script>
         $(document).ready(function () {
+            //
+            // $("#aba1").click(function () {
+            //     $("#aba1").toggleClass("selecionado");
+            //
+            //     //guardo o valor da id de quem eu cliquei
+            //     var meuId = $(this).attr("id");
+            //     //uso o valor para chamar a classe
+            //     $("."+meuId).toggle();
+            // });
+            //
+            // $("#aba2").click(function () {
+            //     $("#aba2").toggleClass("selecionado");
+            //
+            //     //guardo o valor da id de quem eu cliquei
+            //     var meuId = $(this).attr("id");
+            //     //uso o valor para chamar a classe
+            //     $("."+meuId).toggle();
+            // });
+            //
+            // $("#aba3").click(function () {
+            //     $("#aba3").toggleClass("selecionado");
+            //
+            //     //guardo o valor da id de quem eu cliquei
+            //     var meuId = $(this).attr("id");
+            //     //uso o valor para chamar a classe
+            //     $("."+meuId).toggle();
+            // });
 
-            $("#aba1").click(function () {
-                $("#aba1").toggleClass("selecionado");
-
-                //guardo o valor da id de quem eu cliquei
+            $("li").click(function () {
                 var meuId = $(this).attr("id");
-                //uso o valor para chamar a classe
+
+
                 $("."+meuId).toggle();
             });
 
-            $("#aba2").click(function () {
-                $("#aba2").toggleClass("selecionado");
+            $(".titulo").click(function () {
+                var elemPai = $(this).parent();
 
-                //guardo o valor da id de quem eu cliquei
-                var meuId = $(this).attr("id");
-                //uso o valor para chamar a classe
-                $("."+meuId).toggle();
-            });
-
-            $("#aba3").click(function () {
-                $("#aba3").toggleClass("selecionado");
-
-                //guardo o valor da id de quem eu cliquei
-                var meuId = $(this).attr("id");
-                //uso o valor para chamar a classe
-                $("."+meuId).toggle();
-            });
+                elemPai.find(".descricao").toggle();
+            })
 
         });
 
@@ -44,26 +57,23 @@
 <div id="abas">
         <ul>
             <?php foreach ($categorias as $categoria): ?>
-                <li id="aba<?= $categoria->getId()?> "><?= $categoria->getNome()?></li>
+                <li id="aba<?= $categoria->getId()?>"><?= $categoria->getNome()?></li>
             <?php endforeach; ?>
         </ul>
+
+
 </div>
 
-<div id="conteudos">
+<div id="conteudos"> Relação dos produtos
 
-<!--    aqui vai um foreach para os produtos o leo e viado-->
+<!--    aqui vai um foreach para os produtos-->
 <!--    cada produto sera uma div-->
-    <div class="conteudo aba1">
-        Conteudo da Aba 1
-    </div>
-
-    <div class="conteudo aba2">
-        Conteudo da Aba 2
-    </div>
-
-    <div class="conteudo aba3">
-        Conteudo da Aba 3
-    </div>
+    <?php foreach ($produtos as $produto): ?>
+        <div class="conteudo aba<?= $produto->getIdcategoria();?>">
+            <div class="titulo">  <?= $produto->getNome();?>  </div>
+            <div class="descricao">  <?= $produto->getDescricao();?>  </div>
+        </div>
+    <?php endforeach; ?>
 </div>
 
 </body>
