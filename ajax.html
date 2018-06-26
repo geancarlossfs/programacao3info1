@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ksksskksksk</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $("#botao").click(function () {
+                $("#div1").load("http://hawkman.fabricadesoftware.ifc.edu.br/~rafael/lojinha/ajax/categorias.php");
+            });
+
+            $("#botao2").click(function () {
+                $.get("http://hawkman.fabricadesoftware.ifc.edu.br/~rafael/lojinha/ajax/categorias.php", function (data) {
+                    $("#div1").html(data);
+                });
+            });
+
+            $("#botao3").click(function () {
+                var numero = $("#number").val();
+                $.get("http://hawkman.fabricadesoftware.ifc.edu.br/~rafael/lojinha/ajax/produtos.php?categoria=" + numero, function (data) {
+                    $("#div1").html(data);
+                });
+            });
+
+            $("#botao4").click(function () {
+                $.get("https://hawkman.fabricadesoftware.ifc.edu.br/~rafael/lojinha/ajax/dados_json.php", function (data) {
+                    $("#div1").html(data);
+                });
+            });
+
+        });
+
+    </script>
+
+</head>
+<body>
+
+<h1>Titulo</h1>
+
+    <button id="botao">botão</button>
+    <button id="botao2">botão2</button>
+    <button id="botao4">botão4</button>
+    <button id=""></button>
+
+
+    <input type="number" id="number">
+    <input type="submit" id="botao3">
+    <div id="div1"></div>
+
+
+</body>
+</html>
