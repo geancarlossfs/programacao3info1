@@ -1,0 +1,17 @@
+body {
+    background-color: peru;
+    text-align: center;
+    color: white;
+}
+
+input {
+    width: 50px;
+}
+
+form{
+    border: dotted;
+    width: 30%;
+}
+#input{
+    align: center;
+}
