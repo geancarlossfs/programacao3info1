@@ -75,10 +75,21 @@
             $o = "Público";
         }
 
-        echo "IP = ".$ip.". A rede possui ".$qntdsubrede." subredes, ".$qntendsubrede." endereços por subrede e ".$hosts." hosts por subrede.
-         O primeiro endereço de host onde o endereço de IP se encontra é ".$primeirohost.", o último é ". $ultimohost." e 
-         o endereço de broadcast é ".$ipbroadcast.". A máscara de rede em decimal é ".$mascaraA.". A classe do ip é ".$classe." e 
-         é um endereço ".$o.".";
+        echo "<p>A rede possui $qntdsubrede subredes</p>";
+        echo "<p>A rede possui $qntendsubrede endereços por subrede</p>";
+        echo "<p>A rede possui $hosts número de hosts</p>";
+        echo "<p>A rede possui o $primeirohost como primeiro host</p>";
+        echo "<p>A rede possui o $ultimohost como ultimo host</p>";
+        echo "<p>A rede possui o $ipbroadcast como o número de broadcast</p>";
+        echo "<p>A rede possui $mascaraA como mascara decimal</p>";
+        echo "<p>A rede possui a $classe </p>";
+        echo "<p>A rede possui o endereço $o </p>";
+
+
+//        echo "IP = ".$ip.". A rede possui ".$qntdsubrede." subredes, ".$qntendsubrede." endereços por subrede e ".$hosts." hosts por subrede.
+//         O primeiro endereço de host onde o endereço de IP se encontra é ".$primeirohost.", o último é ". $ultimohost." e
+//         o endereço de broadcast é ".$ipbroadcast.". A máscara de rede em decimal é ".$mascaraA.". A classe do ip é ".$classe." e
+//         é um endereço ".$o.".";
     }
 
     calculos($mascara,$priOct,$segOct, $terOct, $ultOct, $bits);

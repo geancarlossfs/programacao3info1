@@ -1,7 +1,12 @@
 body {
-    background-color: peru;
+    background-image: url("thumb-1920-488572.jpg");
     text-align: center;
     color: white;
+}
+
+h1{
+    color: black;
+    font-family: Calibri;
 }
 
 input {
@@ -9,9 +14,11 @@ input {
 }
 
 form{
-    border: dotted;
-    width: 30%;
+    text-align: center;
+    border-left: solid black;
+    width: 1%;
 }
-#input{
-    align: center;
+
+#conteudo{
+    border: black;
 }

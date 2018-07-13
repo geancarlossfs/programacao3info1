@@ -31,7 +31,8 @@
 </head>
 <body>
 
-<h1>Calcule o seu endereço IP aqui</h1>
+<h1>Descubra os dados do seu IP aqui:</h1>
+
 <div id="input">
     <form method="post" id="formulario">
         <input type="number"  name="priOct" id="pri">.
