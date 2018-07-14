@@ -3,22 +3,32 @@ body {
     text-align: center;
     color: white;
 }
-
-h1{
+p{
     color: black;
     font-family: Calibri;
 }
 
+h1{
+    color: black;
+    font-family: Calibri;
+    border: dotted;
+}
+
 input {
     width: 50px;
+    padding: 5px;
 }
 
 form{
     text-align: center;
-    border-left: solid black;
-    width: 1%;
+    height: 10px
 }
 
 #conteudo{
-    border: black;
+border: black;
 }
+
+#formulario{
+
+}
+

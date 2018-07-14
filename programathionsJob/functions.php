@@ -75,13 +75,13 @@
             $o = "Público";
         }
 
-        echo "<p>A rede possui $qntdsubrede subredes</p>";
-        echo "<p>A rede possui $qntendsubrede endereços por subrede</p>";
-        echo "<p>A rede possui $hosts número de hosts</p>";
-        echo "<p>A rede possui o $primeirohost como primeiro host</p>";
-        echo "<p>A rede possui o $ultimohost como ultimo host</p>";
-        echo "<p>A rede possui o $ipbroadcast como o número de broadcast</p>";
-        echo "<p>A rede possui $mascaraA como mascara decimal</p>";
+        echo "<p>A rede possui $qntdsubrede subredes </p>";
+        echo "<p>A rede possui $qntendsubrede endereços por subrede </p>";
+        echo "<p>A rede possui $hosts número de hosts </p>";
+        echo "<p>A rede possui o $primeirohost como primeiro host </p>";
+        echo "<p>A rede possui o $ultimohost como ultimo host </p>";
+        echo "<p>A rede possui o $ipbroadcast como o número de broadcast </p>";
+        echo "<p>A rede possui $mascaraA como mascara decimal </p>";
         echo "<p>A rede possui a $classe </p>";
         echo "<p>A rede possui o endereço $o </p>";
 
